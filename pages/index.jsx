@@ -66,13 +66,16 @@ export default function Home() {
             and learning. I am currently working at{" "}
             <a href="https://www.metabloq.io/">Metabloq.io</a>.
           </h4>
+
           <h3 id={styles.skills}>Skills</h3>
-          <h4>HTML5</h4>
-          <h4>CSS</h4>
-          <h4>JAVASCRIPT</h4>
-          <h4>REACT JS</h4>
-          <h4>NEXT JS</h4>
-          <h4>SASS</h4>
+          <div className={styles.skills}>
+            <h4>HTML5</h4>
+            <h4>CSS</h4>
+            <h4>JAVASCRIPT</h4>
+            <h4>REACT JS</h4>
+            <h4>NEXT JS</h4>
+            <h4>SASS</h4>
+          </div>
         </div>
 
         <div className={styles.frameOfMainPicture}>
@@ -82,19 +85,23 @@ export default function Home() {
         </div>
         <div className={styles.rightContainer}>
           <h3>SERVICES</h3>
-          <h4>Website Development</h4>
-          <h4>Website Design</h4>
-          <h3 id={styles.languages}>Languages</h3>
-          <h4>Greek</h4>
-          <h4>English</h4>
+          <div className={styles.services}>
+            <h4>Website Development</h4>
+            <h4>Website Design</h4>
+          </div>
+          <div className={styles.languages}>
+            <h3 id={styles.languages}>Languages</h3>
+            <h4>Greek</h4>
+            <h4>English</h4>
+          </div>
         </div>
       </div>
       <div className={styles.contact}>
         <div className={styles.contactText}>
-          <h1>Contact</h1>
-          <h2>Have any problem to solve? </h2>
-          <h2>Maybe a new website? </h2>
-          <h2 id={styles.contactMe}>Contact me.</h2>
+          <h2>Contact</h2>
+          <h3>Have any problem to solve? </h3>
+          <h3>Maybe a new website? </h3>
+          <h3 id={styles.contactMe}>Contact me.</h3>
         </div>
         <div className={styles.contactForms}>
           <form onSubmit={sendEmail}>

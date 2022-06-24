@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title key="title">Alex Karidas</title>
           <link rel="shortcut icon" href="" />
           <link
             href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css"
