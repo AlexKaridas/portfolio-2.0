@@ -55,6 +55,9 @@ div.main {
       }
     }
   }
+  div.hiddenNav {
+    display: none;
+  }
 
   div.titleContainer {
     display: flex;
@@ -66,7 +69,7 @@ div.main {
       text-align: center;
       width: 40%;
       font-size: 4rem;
-      font-weight: 400;
+      font-weight: 500;
       //   text-transform: uppercase;
     }
   }
@@ -74,18 +77,21 @@ div.main {
     margin-top: 100px;
     display: flex;
     width: 100%;
+    div.skills {
+      padding-right: 30px;
+    }
 
     div.leftContainer {
       width: 25%;
       h3 {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 2rem;
         text-transform: uppercase;
       }
       #biographyText {
         width: 70%;
-        font-weight: 100;
-        font-size: 1.2rem;
+        font-weight: 400;
+        font-size: 1.5rem;
         text-align: left;
         margin: 10px 0 20px 0;
         a {
@@ -94,8 +100,8 @@ div.main {
         }
       }
       h4 {
-        font-weight: 100;
-        font-size: 1.2rem;
+        font-weight: 400;
+        font-size: 1.5rem;
         margin-top: 5px;
         margin-bottom: 15px;
       }
@@ -107,27 +113,31 @@ div.main {
     }
     div.frameOfMainPicture {
       width: 50%;
-      border: 1px solid black;
+      border: 1px solid rgba(0, 0, 0, 0.17);
       height: 100vh;
       border-radius: 3rem;
 
       div.secondFrame {
-        border: 1px solid black;
+        border: 1px solid rgba(0, 0, 0, 0.329);
         margin: 40px;
         height: 90%;
         border-radius: 3rem;
+        background-image: url(https://media-exp2.licdn.com/dms/image/C4E03AQF2wWz2Yj7DJg/profile-displayphoto-shrink_800_800/0/1645646937841?e=1661385600&v=beta&t=iAt8v7GQic7joVtSky2aQYOGKlVlmn66v6uB8sYw1IU);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
     div.rightContainer {
       width: 25%;
       padding-left: 100px;
       h3 {
-        font-weight: 100;
+        font-weight: 500;
         font-size: 2rem;
       }
       h4 {
-        font-weight: 100;
-        font-size: 1.2rem;
+        font-weight: 400;
+        font-size: 1.5rem;
         margin-top: 15px;
       }
       #languages {
@@ -145,14 +155,88 @@ div.main {
       padding-right: 20rem;
       h2 {
         font-size: 3rem;
-        font-weight: 400;
+        font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 40px;
       }
       h3 {
-        font-size: 2 rem;
-        font-weight: 100;
+        font-size: 1.5rem;
+        font-weight: 400;
         margin-bottom: 20px;
+      }
+      div.social {
+        display: flex;
+        justify-content: space-between;
+        div.twitter {
+          margin: 70px 30px 0 0;
+          a {
+            display: flex;
+            padding: 10px 20px 10px 20px;
+            // background-color: #1c9bef;
+            background-color: black;
+            border: 1px solid rgba(0, 0, 0, 0.152);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10% / 100%;
+            cursor: pointer;
+            transition: ease-in-out 0.2s;
+
+            &:hover {
+              background-color: white;
+              color: black;
+            }
+          }
+          i {
+            padding-right: 15px;
+          }
+        }
+      }
+      div.github {
+        margin: 70px 30px 0 0;
+        a {
+          display: flex;
+          padding: 10px 20px 10px 20px;
+          // background-color: #dd5035;
+          background-color: black;
+          border: 1px solid rgba(0, 0, 0, 0.152);
+          color: #fff;
+          text-decoration: none;
+          border-radius: 10% / 100%;
+          cursor: pointer;
+          transition: ease-in-out 0.2s;
+
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+        i {
+          padding-right: 15px;
+        }
+      }
+      div.linkedn {
+        margin: 70px 0 0 0;
+        a {
+          display: flex;
+          padding: 10px 20px 10px 20px;
+          // background-color: #0b66c3;
+          background-color: black;
+          border: 1px solid rgba(0, 0, 0, 0.152);
+          color: #fff;
+          text-decoration: none;
+          border-radius: 10% / 100%;
+          cursor: pointer;
+          transition: ease-in-out 0.2s;
+
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+
+        i {
+          padding-right: 15px;
+        }
       }
     }
     div.contactForms {
@@ -162,7 +246,7 @@ div.main {
       align-items: center;
       width: 30%;
       h3 {
-        font-weight: 100;
+        font-weight: 400;
         font-size: 2rem;
         margin-bottom: 20px;
       }
@@ -182,7 +266,7 @@ div.main {
         button {
           margin-top: 20px;
           width: 100%;
-          padding: 10px;
+          padding: 10px 70px 10px 70px;
           border: 1px solid black;
           border-radius: 0.6rem;
           background-color: black;
@@ -207,6 +291,7 @@ div.main {
     height: auto;
     display: flex;
     flex-direction: column;
+
     div.navBar {
       display: none;
 
@@ -255,6 +340,7 @@ div.main {
         }
       }
     }
+
     div.titleContainer {
       width: 100%;
       // justify-content: center;
@@ -280,16 +366,17 @@ div.main {
         margin-top: 10vh;
         h3 {
           font-weight: 400;
-          font-size: 3rem;
+          font-size: 5rem;
           text-transform: uppercase;
         }
         #biographyText {
           width: 100%;
-          height: 20vh;
+          height: 60vh;
           font-weight: 400;
-          font-size: 2rem;
+          font-size: 4rem;
           text-align: left;
-          margin: 10px 0 20px 0;
+          margin: 10px 0 100px 0;
+          border-bottom: 1px solid black;
           a {
             text-decoration: none;
             color: rgba(0, 0, 0, 0.507);
@@ -306,15 +393,19 @@ div.main {
           padding: 0;
         }
         div.skills {
-          display: flex;
-          // flex-direction: column;
-          margin: 0 auto;
-          padding: 10px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           width: 100%;
-          padding-bottom: 100px;
+          height: 30vh;
+          margin: 0 auto;
+          margin-top: 30px;
+          margin-bottom: 100px;
+          // padding: 10px;
+          padding-bottom: 350px;
+          border-bottom: 1px solid black;
+
           h4 {
-            padding-right: 20px;
-            font-size: 2rem;
+            font-size: 4rem;
             font-weight: 400;
           }
         }
@@ -335,7 +426,7 @@ div.main {
         // padding-left: 100px;
         h3 {
           font-weight: 400;
-          font-size: 3rem;
+          font-size: 5rem;
         }
         div.services {
           display: flex;
@@ -344,10 +435,11 @@ div.main {
           align-items: center;
           width: 100%;
           margin: 0 auto;
-          padding: 0;
+          padding: 0 0 100px 0;
+          border-bottom: 1px solid black;
           h4 {
             font-weight: 400;
-            font-size: 2.5rem;
+            font-size: 4rem;
             margin-top: 15px;
           }
         }
@@ -358,10 +450,11 @@ div.main {
           align-items: center;
           width: 100%;
           margin: 0 auto;
-          padding: 0;
+          padding: 0 0 100px 0;
+          border-bottom: 1px solid black;
           h4 {
             font-weight: 400;
-            font-size: 2.5rem;
+            font-size: 4rem;
             margin-top: 15px;
           }
         }
@@ -375,7 +468,6 @@ div.main {
       justify-content: center;
       align-items: center;
       width: 100%;
-      // margin: 0 auto;
 
       div.contactText {
         font-size: 2.5rem;
@@ -384,15 +476,66 @@ div.main {
         display: flex;
         flex-direction: column;
         text-align: center;
+        border-bottom: 1px solid black;
+        margin-bottom: 100px;
         h2 {
-          font-size: 3 rem;
+          font-size: 5rem;
           font-weight: 400;
           // margin-bottom: 40px;
         }
         h3 {
-          font-size: 2.5 rem;
+          font-size: 4rem;
           font-weight: 400;
           // margin-bottom: 20px;
+        }
+        div.social {
+          display: flex;
+          justify-content: space-between;
+          div.twitter {
+            margin: 70px 30px 0 0;
+            a {
+              display: flex;
+              padding: 20px 40px 20px 40px;
+              background-color: #1c9bef;
+              border: 1px solid rgba(0, 0, 0, 0.391);
+              color: #fff;
+              text-decoration: none;
+              border-radius: 10% / 100%;
+            }
+            i {
+              padding-right: 15px;
+            }
+          }
+        }
+        div.github {
+          margin: 70px 30px 0 0;
+          a {
+            display: flex;
+            padding: 20px 40px 20px 40px;
+            background-color: #dd5035;
+            border: 1px solid rgba(0, 0, 0, 0.391);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10% / 100%;
+          }
+          i {
+            padding-right: 15px;
+          }
+        }
+        div.linkedn {
+          margin: 70px 0 0 0;
+          a {
+            display: flex;
+            padding: 20px 40px 20px 40px;
+            background-color: #0b66c3;
+            border: 1px solid rgba(0, 0, 0, 0.391);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10% / 100%;
+          }
+          i {
+            padding-right: 15px;
+          }
         }
       }
     }
@@ -402,12 +545,24 @@ div.main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       form {
-        h3 {
-          font-weight: 400;
-          font-size: 2.5rem;
-          margin-top: 15px;
+        div.inputTitles {
+          h3 {
+            font-size: 4rem;
+            font-weight: 400;
+          }
         }
+        div.emailInput {
+          width: 60vh;
+        }
+        div.messageInput {
+          width: 60vh;
+        }
+        div.nameInput {
+          width: 60vh;
+        }
+
         input {
           margin-top: 20px;
           width: 100%;
@@ -417,13 +572,21 @@ div.main {
           background-color: black;
           color: white;
           font-weight: bold;
-          font-size: 1.2rem;
+          font-size: 4rem;
           cursor: pointer;
           transition: ease-in-out 0.2s;
 
           &:hover {
             background-color: white;
             color: black;
+          }
+        }
+        div.submitButton {
+          width: 60vh;
+          margin-bottom: 200px;
+          margin-top: 100px;
+          button {
+            font-size: 3rem;
           }
         }
       }

@@ -55,6 +55,7 @@ export default function Home() {
           </ul>
         </div>
       </div>
+
       <div className={styles.titleContainer}>
         <h1 className={styles.title}>Front-End Developer based in Greece</h1>
       </div>
@@ -101,32 +102,67 @@ export default function Home() {
           <h2>Contact</h2>
           <h3>Have any problem to solve? </h3>
           <h3>Maybe a new website? </h3>
-          <h3 id={styles.contactMe}>Contact me.</h3>
+          <h3>Contact me.</h3>
+          <hr />
+          <div className={styles.social}>
+            <div className={styles.twitter}>
+              <a href="https://twitter.com/AlexKaridas">
+                <i className={"fab fa-twitter"} />
+                <h4>Twitter</h4>
+              </a>
+            </div>
+            <div className={styles.github}>
+              <a href="https://github.com/AlexKaridas">
+                <i className={"fab fa-github"} />
+                <h4>Github</h4>
+              </a>
+            </div>
+            <div className={styles.linkedn}>
+              <a href="https://www.linkedin.com/in/alex-karidas-1a6b4021a/">
+                <i className={"fab fa-linkedin"} />
+                <h4>Linkedn</h4>
+              </a>
+            </div>
+          </div>
         </div>
         <div className={styles.contactForms}>
           <form onSubmit={sendEmail}>
-            <h3>Email</h3>
-            <input
-              type="text"
-              placeholder="Email"
-              id="email"
-              minLength="10"
-              maxLength="20"
-              name="email"
-            />
-            <h3>Name</h3>
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              id="name"
-              required
-            />
-            <h3>Message</h3>
-            <input placeholder="Message" id="Message" name="Message" />
-            <button id={styles.send} type="submit" value="Send Message">
-              Send
-            </button>
+            <div className={styles.inputTitles}>
+              <h3>Email</h3>
+            </div>
+            <div className={styles.emailInput}>
+              <input
+                type="text"
+                placeholder="Email"
+                id="email"
+                minLength="10"
+                maxLength="20"
+                name="email"
+              />
+            </div>
+            <div className={styles.inputTitles}>
+              <h3>Name</h3>
+            </div>
+            <div className={styles.nameInput}>
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                id="name"
+                required
+              />
+            </div>
+            <div className={styles.inputTitles}>
+              <h3>Message</h3>
+            </div>
+            <div className={styles.messageInput}>
+              <input placeholder="Message" id="Message" name="Message" />
+            </div>
+            <div className={styles.submitButton}>
+              <button id={styles.send} type="submit" value="Send Message">
+                Send
+              </button>
+            </div>
           </form>
         </div>
       </div>
