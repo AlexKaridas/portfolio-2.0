@@ -1,5 +1,7 @@
 import styles from "../styles/Home.module.scss";
 import emailjs from "@emailjs/browser";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   function sendEmail(e) {
@@ -22,6 +24,14 @@ export default function Home() {
       );
     e.target.reset();
   }
+
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
   return (
     <div className={styles.main}>
       <div className={styles.navBar}>
@@ -37,6 +47,16 @@ export default function Home() {
             {/* <li>Twitter</li>
             <li>Github</li>
             <li>Linkedn</li> */}
+            <li>
+              <button onClick={() => setTheme("dark") && setMounted(true)}>
+                <i class="fas fa-moon" />
+              </button>
+            </li>
+            <li>
+              <button onClick={() => setTheme("light") && setMounted(false)}>
+                <i class="fas fa-sun" />
+              </button>
+            </li>
             <li>
               <a href="https://github.com/AlexKaridas">
                 <i className={"fab fa-github"}></i>

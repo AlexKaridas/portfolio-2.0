@@ -285,6 +285,38 @@ div.main {
     }
   }
 }
+[data-theme="dark"] div.main {
+  div.navBar {
+    div.leftNav {
+      h3 {
+        a {
+          color: white;
+        }
+      }
+    }
+    div.rightNav {
+      ul {
+        li {
+          a {
+            i {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  div.mainBody {
+    div.leftContainer {
+      #biographyText {
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   div.main {
     width: 120vh;
