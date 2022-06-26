@@ -49,12 +49,12 @@ export default function Home() {
             <li>Linkedn</li> */}
             <li>
               <button onClick={() => setTheme("dark") && setMounted(true)}>
-                <i class="fas fa-moon" />
+                <i className={"fas fa-moon"} />
               </button>
             </li>
             <li>
               <button onClick={() => setTheme("light") && setMounted(false)}>
-                <i class="fas fa-sun" />
+                <i className={"fas fa-sun"} />
               </button>
             </li>
             <li>
