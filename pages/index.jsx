@@ -24,7 +24,6 @@ export default function Home() {
       );
     e.target.reset();
   }
-
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -47,12 +46,12 @@ export default function Home() {
             {/* <li>Twitter</li>
             <li>Github</li>
             <li>Linkedn</li> */}
-            <li>
+            <li id={"moon"}>
               <button onClick={() => setTheme("dark") && setMounted(true)}>
                 <i className={"fas fa-moon"} />
               </button>
             </li>
-            <li>
+            <li id={"sun"}>
               <button onClick={() => setTheme("light") && setMounted(false)}>
                 <i className={"fas fa-sun"} />
               </button>
@@ -101,7 +100,10 @@ export default function Home() {
 
         <div className={styles.frameOfMainPicture}>
           <div className={styles.secondFrame}>
-            <div className={styles.mainPicture}></div>
+            <div className={styles.mainPicture}>
+              <img src="/profile.jpg" className={styles.profile} alt="Profile photo"></img>
+              <img src="/profile.jpg" className={styles.overlay}></img>
+            </div>
           </div>
         </div>
         <div className={styles.rightContainer}>

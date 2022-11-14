@@ -1,11 +1,12 @@
 div.main {
   padding: 60px;
+
   div.navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    // padding: 20px;
+
     div.logo {
       padding-right: 100px;
       cursor: default;
@@ -13,6 +14,7 @@ div.main {
       font-weight: bold;
       text-transform: uppercase;
     }
+
     div.leftNav {
       display: flex;
       align-items: center;
@@ -22,15 +24,18 @@ div.main {
         margin-right: 20px;
         transition: ease-in-out 0.2s;
         cursor: pointer;
+
         &:hover {
           transform: translate(-2px, -2px);
         }
+
         a {
           text-decoration: none;
           color: black;
         }
       }
     }
+
     div.rightNav {
       ul {
         display: flex;
@@ -41,11 +46,13 @@ div.main {
           margin-right: 20px;
           list-style-type: none;
           font-weight: 700;
+
           a {
             i {
               color: black;
               font-size: 20px;
               transition: ease-in-out 0.2s;
+
               &:hover {
                 transform: translate(-2px, -2px);
               }
@@ -55,6 +62,7 @@ div.main {
       }
     }
   }
+
   div.hiddenNav {
     display: none;
   }
@@ -65,6 +73,7 @@ div.main {
     align-items: center;
     margin-top: 100px;
     width: 100%;
+
     h1 {
       text-align: center;
       width: 40%;
@@ -73,79 +82,115 @@ div.main {
       //   text-transform: uppercase;
     }
   }
+
   div.mainBody {
     margin-top: 100px;
     display: flex;
     width: 100%;
+
     div.skills {
       padding-right: 30px;
     }
 
     div.leftContainer {
       width: 25%;
+
       h3 {
         font-weight: 500;
         font-size: 2rem;
         text-transform: uppercase;
       }
+
       #biographyText {
         width: 70%;
         font-weight: 400;
         font-size: 1.5rem;
         text-align: left;
         margin: 10px 0 20px 0;
+
         a {
           text-decoration: none;
           color: rgba(0, 0, 0, 0.507);
         }
       }
+
       h4 {
         font-weight: 400;
         font-size: 1.5rem;
         margin-top: 5px;
         margin-bottom: 15px;
       }
+
       #skills {
         margin-top: 100px;
         margin-bottom: 20px;
         text-transform: uppercase;
       }
     }
+
     div.frameOfMainPicture {
       width: 50%;
       border: 1px solid rgba(0, 0, 0, 0.17);
       height: 100vh;
       border-radius: 3rem;
 
+      &:hover {
+        border: 1px solid black;
+        transition: ease-in-out 0.3s;
+      }
+
       div.secondFrame {
         border: 1px solid rgba(0, 0, 0, 0.329);
         margin: 40px;
         height: 90%;
         border-radius: 3rem;
-        background-image: url(https://media-exp2.licdn.com/dms/image/C4E03AQF2wWz2Yj7DJg/profile-displayphoto-shrink_800_800/0/1645646937841?e=1661385600&v=beta&t=iAt8v7GQic7joVtSky2aQYOGKlVlmn66v6uB8sYw1IU);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+
+        div.mainPicture {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          img.profile {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          img.overlay {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            image-rendering: pixelated
+          }
+
+        }
       }
     }
+
     div.rightContainer {
       width: 25%;
       padding-left: 100px;
+
       h3 {
         font-weight: 500;
         font-size: 2rem;
       }
+
       h4 {
         font-weight: 400;
         font-size: 1.5rem;
         margin-top: 15px;
       }
+
       #languages {
         margin-top: 200px;
         text-transform: uppercase;
       }
     }
   }
+
   div.contact {
     position: relative;
     display: flex;
@@ -153,22 +198,27 @@ div.main {
     div.contactText {
       padding: 200px 200px 200px 150px;
       padding-right: 20rem;
+
       h2 {
         font-size: 3rem;
         font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 40px;
       }
+
       h3 {
         font-size: 1.5rem;
         font-weight: 400;
         margin-bottom: 20px;
       }
+
       div.social {
         display: flex;
         justify-content: space-between;
+
         div.twitter {
           margin: 70px 30px 0 0;
+
           a {
             display: flex;
             padding: 10px 20px 10px 20px;
@@ -186,13 +236,16 @@ div.main {
               color: black;
             }
           }
+
           i {
             padding-right: 15px;
           }
         }
       }
+
       div.github {
         margin: 70px 30px 0 0;
+
         a {
           display: flex;
           padding: 10px 20px 10px 20px;
@@ -210,12 +263,15 @@ div.main {
             color: black;
           }
         }
+
         i {
           padding-right: 15px;
         }
       }
+
       div.linkedn {
         margin: 70px 0 0 0;
+
         a {
           display: flex;
           padding: 10px 20px 10px 20px;
@@ -239,23 +295,27 @@ div.main {
         }
       }
     }
+
     div.contactForms {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 30%;
+
       h3 {
         font-weight: 400;
         font-size: 2rem;
         margin-bottom: 20px;
       }
+
       form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
+
         input {
           width: 100%;
           margin-bottom: 20px;
@@ -263,6 +323,7 @@ div.main {
           border: 1px solid rgba(0, 0, 0, 0.459);
           border-radius: 0.6rem;
         }
+
         button {
           margin-top: 20px;
           width: 100%;
@@ -285,6 +346,7 @@ div.main {
     }
   }
 }
+
 [data-theme="dark"] div.main {
   div.navBar {
     div.leftNav {
@@ -294,6 +356,7 @@ div.main {
         }
       }
     }
+
     div.rightNav {
       ul {
         li {
@@ -306,6 +369,7 @@ div.main {
       }
     }
   }
+
   div.mainBody {
     div.leftContainer {
       #biographyText {
@@ -325,13 +389,14 @@ div.main {
     flex-direction: column;
 
     div.navBar {
-      display: none;
+      // display: none;
 
       div.logo {
         display: none;
       }
+
       div.leftNav {
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: space-between;
 
@@ -339,15 +404,18 @@ div.main {
           margin-right: 20px;
           transition: ease-in-out 0.2s;
           cursor: pointer;
+
           &:hover {
             transform: translate(-2px, -2px);
           }
+
           a {
             text-decoration: none;
             color: black;
           }
         }
       }
+
       div.rightNav {
         ul {
           display: flex;
@@ -355,14 +423,17 @@ div.main {
           justify-content: space-between;
 
           li {
+            display: none;
             margin-right: 20px;
             list-style-type: none;
             font-weight: 700;
+
             a {
               i {
                 color: black;
                 font-size: 20px;
                 transition: ease-in-out 0.2s;
+
                 &:hover {
                   transform: translate(-2px, -2px);
                 }
@@ -380,6 +451,7 @@ div.main {
       // margin-top: 100px;
       // width: 100%;
       margin: 0 auto;
+
       h1 {
         // text-align: center;
         width: 70%;
@@ -389,19 +461,23 @@ div.main {
         //   text-transform: uppercase;
       }
     }
+
     div.mainBody {
       // margin-top: 100px;
       display: flex;
       width: 100%;
       flex-direction: column;
+
       div.leftContainer {
         width: 100%;
         margin-top: 10vh;
+
         h3 {
           font-weight: 400;
           font-size: 5rem;
           text-transform: uppercase;
         }
+
         #biographyText {
           width: 100%;
           // height: 60vh;
@@ -411,21 +487,25 @@ div.main {
           text-align: left;
           margin: 10px 0 100px 0;
           border-bottom: 1px solid black;
+
           a {
             text-decoration: none;
             color: rgba(0, 0, 0, 0.507);
           }
         }
+
         h4 {
           font-weight: 100;
           font-size: 1.7rem;
           margin-top: 5px;
           // margin-bottom: 15px;
         }
+
         #skills {
           margin: 0;
           padding: 0;
         }
+
         div.skills {
           // display: grid;
           // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -447,10 +527,12 @@ div.main {
           }
         }
       }
+
       div.frameOfMainPicture {
         width: 70%;
         margin: 0 auto;
       }
+
       div.rightContainer {
         display: flex;
         flex-direction: column;
@@ -460,11 +542,13 @@ div.main {
         margin: 0;
         padding: 100px 0 100px 0;
         height: auto;
+
         // padding-left: 100px;
         h3 {
           font-weight: 400;
           font-size: 5rem;
         }
+
         div.services {
           display: flex;
           flex-direction: column;
@@ -475,12 +559,14 @@ div.main {
           margin: 0 auto;
           padding: 0 0 100px 0;
           border-bottom: 1px solid black;
+
           h4 {
             font-weight: 400;
             font-size: 4rem;
             margin-top: 15px;
           }
         }
+
         div.languages {
           display: flex;
           flex-direction: column;
@@ -490,6 +576,7 @@ div.main {
           margin: 0 auto;
           padding: 0 0 100px 0;
           border-bottom: 1px solid black;
+
           h4 {
             font-weight: 400;
             font-size: 4rem;
@@ -498,6 +585,7 @@ div.main {
         }
       }
     }
+
     div.contact {
       // margin: 0 auto;
       // display: flex;
@@ -516,22 +604,27 @@ div.main {
         text-align: center;
         border-bottom: 1px solid black;
         margin-bottom: 100px;
+
         h2 {
           font-size: 5rem;
           font-weight: 400;
           // margin-bottom: 40px;
         }
+
         h3 {
           font-size: 4rem;
           font-weight: 400;
           // margin-bottom: 20px;
         }
+
         div.social {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+
           div.twitter {
             margin: 70px 30px 0 0;
+
             a {
               display: flex;
               justify-content: center;
@@ -542,13 +635,16 @@ div.main {
               text-decoration: none;
               border-radius: 10% / 100%;
             }
+
             i {
               padding-right: 15px;
             }
           }
         }
+
         div.github {
           margin: 70px 30px 0 0;
+
           a {
             display: flex;
             justify-content: center;
@@ -559,12 +655,15 @@ div.main {
             text-decoration: none;
             border-radius: 10% / 100%;
           }
+
           i {
             padding-right: 15px;
           }
         }
+
         div.linkedn {
           margin: 70px 30px 0 0;
+
           a {
             justify-content: center;
             display: flex;
@@ -575,12 +674,14 @@ div.main {
             text-decoration: none;
             border-radius: 10% / 100%;
           }
+
           i {
             padding-right: 15px;
           }
         }
       }
     }
+
     div.contactForms {
       width: 100%;
       display: flex;
@@ -595,12 +696,15 @@ div.main {
             font-weight: 400;
           }
         }
+
         div.emailInput {
           width: 60vh;
         }
+
         div.messageInput {
           width: 60vh;
         }
+
         div.nameInput {
           width: 60vh;
         }
@@ -623,10 +727,12 @@ div.main {
             color: black;
           }
         }
+
         div.submitButton {
           width: 60vh;
           margin-bottom: 200px;
           margin-top: 100px;
+
           button {
             font-size: 3rem;
           }
