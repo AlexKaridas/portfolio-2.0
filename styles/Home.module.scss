@@ -1,5 +1,6 @@
 div.main {
   padding: 60px;
+  width: 100%;
 
   div.navBar {
     display: flex;
@@ -162,7 +163,8 @@ div.main {
             position: absolute;
             left: 0px;
             top: 0px;
-            image-rendering: pixelated
+            image-rendering: pixelated;
+            object-fit: cover;
           }
 
         }
@@ -381,9 +383,51 @@ div.main {
   }
 }
 
+@media only screen and (max-width: 1208px) {
+  div.main {
+    div.contact {
+      div.contactForms {
+        margin-right: 200px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1128px) {
+  div.main {
+    width: 100vh;
+
+    div.navBar {
+      div.rigthNav {
+        ul {
+          li {
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 800px) {
+      div.main {
+        font-size: 2rem;
+      }
+    }
+
+    div.contact {
+      display: grid;
+      position: relative;
+
+      div.contactForms {
+        margin-left: 25%;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   div.main {
-    width: 120vh;
+    width: 100vh;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -446,24 +490,31 @@ div.main {
 
     div.titleContainer {
       width: 100%;
-      // justify-content: center;
-      // align-items: center;
-      // margin-top: 100px;
-      // width: 100%;
       margin: 0 auto;
 
       h1 {
-        // text-align: center;
         width: 70%;
         font-size: 6rem;
         font-weight: 400;
         font-family: "Cinzel", serif;
-        //   text-transform: uppercase;
+      }
+    }
+
+    div.frameOfMainPicture {
+      div.secondFrame {
+        div.mainPicture {
+          img.profile {
+            object-fit: cover;
+          }
+
+          img.overlay {
+            object-fit: cover;
+          }
+        }
       }
     }
 
     div.mainBody {
-      // margin-top: 100px;
       display: flex;
       width: 100%;
       flex-direction: column;
@@ -480,7 +531,6 @@ div.main {
 
         #biographyText {
           width: 100%;
-          // height: 60vh;
           height: auto;
           font-weight: 400;
           font-size: 4rem;
@@ -498,7 +548,6 @@ div.main {
           font-weight: 100;
           font-size: 1.7rem;
           margin-top: 5px;
-          // margin-bottom: 15px;
         }
 
         #skills {
@@ -507,8 +556,6 @@ div.main {
         }
 
         div.skills {
-          // display: grid;
-          // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -516,9 +563,6 @@ div.main {
           height: auto;
           margin-top: 30px;
           margin-bottom: 100px;
-          // margin-bottom: 100px;
-          // padding: 10px;
-          // padding-bottom: 350px;
           border-bottom: 1px solid black;
 
           h4 {
@@ -543,7 +587,6 @@ div.main {
         padding: 100px 0 100px 0;
         height: auto;
 
-        // padding-left: 100px;
         h3 {
           font-weight: 400;
           font-size: 5rem;
@@ -587,10 +630,7 @@ div.main {
     }
 
     div.contact {
-      // margin: 0 auto;
-      // display: flex;
       flex-direction: column;
-      // justify-content: center;
       align-items: center;
       width: 100%;
 
@@ -608,13 +648,11 @@ div.main {
         h2 {
           font-size: 5rem;
           font-weight: 400;
-          // margin-bottom: 40px;
         }
 
         h3 {
           font-size: 4rem;
           font-weight: 400;
-          // margin-bottom: 20px;
         }
 
         div.social {
@@ -712,13 +750,12 @@ div.main {
         input {
           margin-top: 20px;
           width: 100%;
-          padding: 10px;
           border: 1px solid black;
           border-radius: 0.6rem;
           background-color: black;
           color: white;
-          font-weight: bold;
-          font-size: 4rem;
+          font-weight: medium;
+          font-size: 2rem;
           cursor: pointer;
           transition: ease-in-out 0.2s;
 

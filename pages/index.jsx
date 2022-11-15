@@ -4,7 +4,9 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [setLoading, Loading] = useState(false);
   function sendEmail(e) {
+    setLoading == false;
     e.preventDefault();
 
     emailjs
@@ -17,13 +19,20 @@ export default function Home() {
       .then(
         (result) => {
           console.log(result.text);
+          setLoading == true;
         },
         (error) => {
           console.log(error.text);
         }
       );
     e.target.reset();
+    if (Loading === false) {
+      window.alert(error);
+    } else {
+      window.alert("Message has been sent.");
+    }
   }
+
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -43,9 +52,6 @@ export default function Home() {
         <div className={styles.logo}>Alex Karidas</div>
         <div className={styles.rightNav}>
           <ul>
-            {/* <li>Twitter</li>
-            <li>Github</li>
-            <li>Linkedn</li> */}
             <li id={"moon"}>
               <button onClick={() => setTheme("dark") && setMounted(true)}>
                 <i className={"fas fa-moon"} />
@@ -155,11 +161,12 @@ export default function Home() {
             <div className={styles.emailInput}>
               <input
                 type="text"
-                placeholder="Email"
+                placeholder="example@email.com"
                 id="email"
-                minLength="10"
-                maxLength="20"
+                minLength="15"
+                maxLength="30"
                 name="email"
+                required
               />
             </div>
             <div className={styles.inputTitles}>
@@ -168,9 +175,10 @@ export default function Home() {
             <div className={styles.nameInput}>
               <input
                 type="text"
-                placeholder="Name"
+                placeholder="John"
                 name="name"
                 id="name"
+                maxLength="30"
                 required
               />
             </div>
@@ -178,7 +186,7 @@ export default function Home() {
               <h3>Message</h3>
             </div>
             <div className={styles.messageInput}>
-              <input placeholder="Message" id="Message" name="Message" />
+              <input placeholder="" id="Message" name="Message" required />
             </div>
             <div className={styles.submitButton}>
               <button id={styles.send} type="submit" value="Send Message">
