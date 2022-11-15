@@ -186,7 +186,7 @@ export default function Home() {
               <h3>Message</h3>
             </div>
             <div className={styles.messageInput}>
-              <input placeholder="" id="Message" name="Message" required />
+              <textarea placeholder="Insert message to be sent..." id={styles.message} name="Message" required />
             </div>
             <div className={styles.submitButton}>
               <button id={styles.send} type="submit" value="Send Message">

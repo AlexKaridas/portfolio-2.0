@@ -303,7 +303,7 @@ div.main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 30%;
+      padding-right: 100px;
 
       h3 {
         font-weight: 400;
@@ -324,6 +324,10 @@ div.main {
           padding: 10px;
           border: 1px solid rgba(0, 0, 0, 0.459);
           border-radius: 0.6rem;
+        }
+
+        textarea {
+          padding: 20px;
         }
 
         button {
@@ -387,7 +391,8 @@ div.main {
   div.main {
     div.contact {
       div.contactForms {
-        margin-right: 200px;
+        // margin-right: 200px;
+        width: 50%;
       }
     }
   }
@@ -718,60 +723,77 @@ div.main {
           }
         }
       }
-    }
 
-    div.contactForms {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
 
-      form {
-        div.inputTitles {
-          h3 {
-            font-size: 4rem;
-            font-weight: 400;
-          }
-        }
+      div.contactForms {
+        // width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        width: 50%;
 
-        div.emailInput {
-          width: 60vh;
-        }
-
-        div.messageInput {
-          width: 60vh;
-        }
-
-        div.nameInput {
-          width: 60vh;
-        }
-
-        input {
-          margin-top: 20px;
+        form {
           width: 100%;
-          border: 1px solid black;
-          border-radius: 0.6rem;
-          background-color: black;
-          color: white;
-          font-weight: medium;
-          font-size: 2rem;
-          cursor: pointer;
-          transition: ease-in-out 0.2s;
 
-          &:hover {
-            background-color: white;
-            color: black;
+          div.inputTitles {
+            h3 {
+              font-size: 4rem;
+              font-weight: 400;
+            }
           }
-        }
 
-        div.submitButton {
-          width: 60vh;
-          margin-bottom: 200px;
-          margin-top: 100px;
+          div.emailInput {
+            width: 50vh;
+          }
 
-          button {
-            font-size: 3rem;
+          div.messageInput {
+            width: 50vh;
+          }
+
+          div.nameInput {
+            width: 50vh;
+          }
+
+          input {
+            margin-top: 20px;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 0.6rem;
+            background-color: black;
+            color: white;
+            font-weight: medium;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: ease-in-out 0.2s;
+
+            &:hover {
+              background-color: white;
+              color: black;
+            }
+          }
+
+          div.messageInput {
+            // width: 100vh;
+
+            textarea {
+              // width: 100vh;
+              height: 300px;
+              width: 110%;
+              font-size: 2rem;
+            }
+          }
+
+
+
+          div.submitButton {
+            width: 60vh;
+            margin-bottom: 200px;
+            margin-top: 100px;
+
+            button {
+              font-size: 3rem;
+            }
           }
         }
       }
