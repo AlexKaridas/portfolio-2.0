@@ -2,8 +2,12 @@ import styles from "../styles/Home.module.scss";
 import emailjs from "@emailjs/browser";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import AOS from 'aos';
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   const [setLoading, Loading] = useState(false);
   function sendEmail(e) {
     setLoading == false;
@@ -43,14 +47,14 @@ export default function Home() {
   return (
     <div className={styles.main}>
       <div className={styles.navBar}>
-        <div className={styles.leftNav}>
+        <div className={styles.leftNav} data-aos="fade-up">
           <h3>
             <a href="https://github.com/AlexKaridas?tab=repositories">WORKS</a>
           </h3>
           <h3>CONTACT</h3>
         </div>
-        <div className={styles.logo}>Alex Karidas</div>
-        <div className={styles.rightNav}>
+        <div className={styles.logo} data-aos="fade-up">Alex Karidas</div>
+        <div className={styles.rightNav} data-aos="fade-up">
           <ul>
             <li id={"moon"}>
               <button onClick={() => setTheme("dark") && setMounted(true)}>
@@ -81,20 +85,20 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.titleContainer}>
+      <div className={styles.titleContainer} data-aos="fade-up">
         <h1 className={styles.title}>Front-End Developer based in Greece</h1>
       </div>
       <div className={styles.mainBody}>
         <div className={styles.leftContainer}>
-          <h3>Biography</h3>
-          <h4 id={styles.biographyText}>
+          <h3 data-aos="fade-up">Biography</h3>
+          <h4 id={styles.biographyText} data-aos="fade-up">
             I am a web developer based in Greece with a passion for programming
             and learning. I am currently working at{" "}
             <a href="https://www.metabloq.io/">Metabloq.io</a>.
           </h4>
 
-          <h3 id={styles.skills}>Skills</h3>
-          <div className={styles.skills}>
+          <div className={styles.skills} data-aos="fade-up">
+            <h3 id={styles.skills} data-aos="fade-up">Skills</h3>
             <h4>HTML5</h4>
             <h4>CSS</h4>
             <h4>JAVASCRIPT</h4>
@@ -104,48 +108,48 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.frameOfMainPicture}>
-          <div className={styles.secondFrame}>
-            <div className={styles.mainPicture}>
+        <div className={styles.frameOfMainPicture} data-aos="fade-up">
+          <div className={styles.secondFrame} data-aos="fade-up">
+            <div className={styles.mainPicture} data-aos="fade-up">
               <img src="/profile.jpg" className={styles.profile} alt="Profile photo"></img>
               <img src="/profile.jpg" className={styles.overlay}></img>
             </div>
           </div>
         </div>
-        <div className={styles.rightContainer}>
+        <div className={styles.rightContainer} data-aos="fade-up">
           <h3>SERVICES</h3>
-          <div className={styles.services}>
+          <div className={styles.services} data-aos="fade-up">
             <h4>Website Development</h4>
             <h4>Website Design</h4>
           </div>
-          <div className={styles.languages}>
+          <div className={styles.languages} data-aos="fade-up">
             <h3 id={styles.languages}>Languages</h3>
             <h4>Greek</h4>
             <h4>English</h4>
           </div>
         </div>
       </div>
-      <div className={styles.contact}>
+      <div className={styles.contact} data-aos="fade-up">
         <div className={styles.contactText}>
           <h2>Contact</h2>
           <h3>Have any problem to solve? </h3>
           <h3>Maybe a new website? </h3>
           <h3>Contact me.</h3>
           <hr />
-          <div className={styles.social}>
-            <div className={styles.twitter}>
+          <div className={styles.social} data-aos="fade-up">
+            <div className={styles.twitter} data-aos="fade-up">
               <a href="https://twitter.com/AlexKaridas">
                 <i className={"fab fa-twitter"} />
                 <h4>Twitter</h4>
               </a>
             </div>
-            <div className={styles.github}>
+            <div className={styles.github} data-aos="fade-up">
               <a href="https://github.com/AlexKaridas">
                 <i className={"fab fa-github"} />
                 <h4>Github</h4>
               </a>
             </div>
-            <div className={styles.linkedn}>
+            <div className={styles.linkedn} data-aos="fade-up">
               <a href="https://www.linkedin.com/in/alex-karidas-1a6b4021a/">
                 <i className={"fab fa-linkedin"} />
                 <h4>Linkedn</h4>
@@ -153,12 +157,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={styles.contactForms}>
+        <div className={styles.contactForms} data-aos="fade-up">
           <form onSubmit={sendEmail}>
-            <div className={styles.inputTitles}>
+            <div className={styles.inputTitles} data-aos="fade-up">
               <h3>Email</h3>
             </div>
-            <div className={styles.emailInput}>
+            <div className={styles.emailInput} data-aos="fade-up">
               <input
                 type="text"
                 placeholder="example@email.com"
@@ -169,10 +173,10 @@ export default function Home() {
                 required
               />
             </div>
-            <div className={styles.inputTitles}>
+            <div className={styles.inputTitles} data-aos="fade-up">
               <h3>Name</h3>
             </div>
-            <div className={styles.nameInput}>
+            <div className={styles.nameInput} data-aos="fade-up">
               <input
                 type="text"
                 placeholder="John"
@@ -182,13 +186,13 @@ export default function Home() {
                 required
               />
             </div>
-            <div className={styles.inputTitles}>
+            <div className={styles.inputTitles} data-aos="fade-up">
               <h3>Message</h3>
             </div>
             <div className={styles.messageInput}>
-              <textarea placeholder="Insert message to be sent..." id={styles.message} name="Message" required />
+              <textarea placeholder="Insert message to be sent..." id={styles.message} name="Message" required data-aos="fade-up" />
             </div>
-            <div className={styles.submitButton}>
+            <div className={styles.submitButton} data-aos="fade-up">
               <button id={styles.send} type="submit" value="Send Message">
                 Send
               </button>
