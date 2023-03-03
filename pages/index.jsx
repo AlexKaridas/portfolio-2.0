@@ -96,7 +96,7 @@ export default function Home() {
           <h4 id={styles.biographyText} data-aos="fade-up">
             I am a web developer based in Greece with a passion for programming
             and learning. I am currently working at{" "}
-            <a href="https://www.metabloq.io/" id={styles.metabloq} target="_blank">Metabloq.io</a>
+            <a href="https://www.metabloq.io/" id={styles.metabloq} target="_blank" rel="noreferrer">Metabloq.io</a>
           </h4>
 
           <div className={styles.skills} data-aos="fade-up">

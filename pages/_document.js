@@ -4,7 +4,6 @@ export default function Document() {
     return (
         <Html>
             <Head>
-                <title key="title">Alex Karidas</title>
                 <meta name="description" content="Alex Karidas is a software engineer and designer based in Greece." />
                 <meta name="keywords" content="Alex Karidas, Software Engineer, Designer, Greece" />
                 <meta name="author" content="Alex Karidas" />
@@ -24,9 +23,6 @@ export default function Document() {
                 />
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"></link>
             </Head>
-            {/* <script>
-                AOS.init();
-            </script> */}
             <body>
                 <Main />
                 <NextScript />
