@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import AOS from 'aos';
 
 export default function Home() {
+  const [toggle, setToggle] = useState(true);
+
   useEffect(() => {
     AOS.init()
   }, [])
@@ -94,7 +96,7 @@ export default function Home() {
           <h4 id={styles.biographyText} data-aos="fade-up">
             I am a web developer based in Greece with a passion for programming
             and learning. I am currently working at{" "}
-            <a href="https://www.metabloq.io/">Metabloq.io</a>.
+            <a href="https://www.metabloq.io/" id={styles.metabloq} target="_blank">Metabloq.io</a>
           </h4>
 
           <div className={styles.skills} data-aos="fade-up">
@@ -136,20 +138,20 @@ export default function Home() {
           <h3>Maybe a new website? </h3>
           <h3>Contact me.</h3>
           <hr />
-          <div className={styles.social} data-aos="fade-up">
-            <div className={styles.twitter} data-aos="fade-up">
+          <div className={styles.social_container} data-aos="fade-up">
+            <div className={styles.social} data-aos="fade-up">
               <a href="https://twitter.com/AlexKaridas">
                 <i className={"fab fa-twitter"} />
                 <h4>Twitter</h4>
               </a>
             </div>
-            <div className={styles.github} data-aos="fade-up">
+            <div className={styles.social} data-aos="fade-up">
               <a href="https://github.com/AlexKaridas">
                 <i className={"fab fa-github"} />
                 <h4>Github</h4>
               </a>
             </div>
-            <div className={styles.linkedn} data-aos="fade-up">
+            <div className={styles.social} data-aos="fade-up">
               <a href="https://www.linkedin.com/in/alex-karidas-1a6b4021a/">
                 <i className={"fab fa-linkedin"} />
                 <h4>Linkedn</h4>
