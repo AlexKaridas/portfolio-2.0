@@ -81,7 +81,6 @@ div.main {
       width: 40%;
       font-size: 4rem;
       font-weight: 500;
-      //   text-transform: uppercase;
     }
   }
 
@@ -381,6 +380,7 @@ div.main {
       div.main {
         font-size: 2rem;
       }
+
       div.contact {
         display: flex;
         flex-direction: column;
@@ -409,7 +409,7 @@ div.main {
 
 @media only screen and (max-width: 600px) {
   div.main {
-    width: 100vh;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -472,27 +472,14 @@ div.main {
 
     div.titleContainer {
       width: 100%;
-      margin: 0 auto;
+      margin: 0;
+      padding: 0;
 
       h1 {
-        width: 70%;
-        font-size: 6rem;
+        width: 100%;
+        font-size: 3rem;
         font-weight: 400;
         font-family: "Cinzel", serif;
-      }
-    }
-
-    div.frameOfMainPicture {
-      div.secondFrame {
-        div.mainPicture {
-          img.profile {
-            object-fit: cover;
-          }
-
-          img.overlay {
-            object-fit: cover;
-          }
-        }
       }
     }
 
@@ -503,20 +490,20 @@ div.main {
 
       div.leftContainer {
         width: 100%;
-        margin-top: 10vh;
 
         h3 {
           font-weight: 400;
-          font-size: 5rem;
+          font-size: 2.5rem;
           text-transform: uppercase;
+          text-align: center;
         }
 
         #biographyText {
           width: 100%;
           height: auto;
-          font-weight: 400;
-          font-size: 4rem;
-          text-align: left;
+          font-weight: 300;
+          font-size: 1.5rem;
+          text-align: center;
           margin: 10px 0 100px 0;
           border-bottom: 1px solid black;
 
@@ -528,7 +515,7 @@ div.main {
 
         h4 {
           font-weight: 100;
-          font-size: 1.7rem;
+          font-size: 1.5rem;
           margin-top: 5px;
         }
 
@@ -543,20 +530,48 @@ div.main {
           align-items: center;
           width: 100%;
           height: auto;
-          margin-top: 30px;
+          margin-top: 20px;
           margin-bottom: 100px;
           border-bottom: 1px solid black;
 
           h4 {
-            font-size: 4rem;
-            font-weight: 400;
+            font-size: 1.5rem;
+            font-weight: 300;
           }
         }
       }
 
       div.frameOfMainPicture {
-        width: 70%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+
+        div.secondFrame {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+
+          div.mainPicture {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 500px;
+
+            img.profile {
+              width: 100%;
+              margin: 0;
+              padding: 0;
+            }
+
+            img.overlay {
+              width: 100%;
+              margin: 0;
+              padding: 0;
+              display: none;
+            }
+          }
+        }
       }
 
       div.rightContainer {
@@ -565,13 +580,15 @@ div.main {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin: 0;
-        padding: 100px 0 100px 0;
+        margin: 100px 0 0 0;
+        padding: 0;
         height: auto;
 
         h3 {
           font-weight: 400;
-          font-size: 5rem;
+          font-size: 2.5rem;
+          margin: 0;
+          padding: 0;
         }
 
         div.services {
@@ -581,13 +598,14 @@ div.main {
           align-items: center;
           text-align: center;
           width: 100%;
-          margin: 0 auto;
-          padding: 0 0 100px 0;
+          margin: 0;
+          padding: 0;
           border-bottom: 1px solid black;
+          height: auto;
 
           h4 {
-            font-weight: 400;
-            font-size: 4rem;
+            font-weight: 300;
+            font-size: 1.5rem;
             margin-top: 15px;
           }
         }
@@ -598,14 +616,18 @@ div.main {
           justify-content: center;
           align-items: center;
           width: 100%;
-          margin: 0 auto;
-          padding: 0 0 100px 0;
+          margin: 0;
+          padding: 0;
           border-bottom: 1px solid black;
+          height: auto;
+
+          #languages {
+            margin-top: 100px;
+          }
 
           h4 {
-            font-weight: 400;
-            font-size: 4rem;
-            margin-top: 15px;
+            font-weight: 300;
+            font-size: 1.5rem;
           }
         }
       }
@@ -616,115 +638,92 @@ div.main {
       align-items: center;
       justify-content: center;
       width: 100%;
+      padding-right: 0px;
+      margin-right: 0px;
+      margin-left: 0px;
+      padding-left: 0px;
+      margin-top: 100px;
 
       div.contactText {
-        width: 100vh;
+        width: 100%;
         font-size: 2.5rem;
         font-weight: 400;
-        padding: 100px 0px 100px 0px;
         display: flex;
         flex-direction: column;
         text-align: center;
-        border-bottom: 1px solid black;
+        border-bottom: 0px solid black;
         margin-bottom: 100px;
+        padding-right: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
 
         h2 {
-          font-size: 5rem;
+          font-size: 2.5rem;
           font-weight: 400;
         }
 
         h3 {
-          font-size: 4rem;
-          font-weight: 400;
+          font-size: 1.5rem;
+          font-weight: 300;
         }
 
-        div.social {
-          display: flex;
-          flex-direction: column;
+        div.social_container {
+          display: grid;
+          grid-template-columns: 3;
           width: 100%;
+          gap: 20px;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          margin: 50px 0 0 0;
 
-          div.twitter {
-            margin: 70px 0px 0 0;
+          div.social {
+            width: 100%;
+            margin: 0px 0px 0 0;
+            padding: 0;
 
             a {
-              display: flex;
-              justify-content: center;
-              padding: 20px 40px 20px 40px;
-              background-color: #1c9bef;
-              border: 1px solid rgba(0, 0, 0, 0.391);
-              color: #fff;
-              text-decoration: none;
-              border-radius: 10% / 100%;
+              padding: 10;
+              margin: 0;
+              width: 150px;
+              font-size: 1.3rem;
             }
 
-            i {
-              padding-right: 15px;
-            }
-          }
-        }
-
-        div.github {
-          margin: 70px 0px 0 0;
-
-          a {
-            display: flex;
-            justify-content: center;
-            padding: 20px 40px 20px 40px;
-            background-color: #dd5035;
-            border: 1px solid rgba(0, 0, 0, 0.391);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 10% / 100%;
           }
 
-          i {
-            padding-right: 15px;
-          }
-        }
-
-        div.linkedn {
-          margin: 0px 0px 0 0;
-
-          a {
-            justify-content: center;
-            display: flex;
-            padding: 20px 40px 20px 40px;
-            background-color: #0b66c3;
-            border: 1px solid rgba(0, 0, 0, 0.391);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 10% / 100%;
-          }
-
-          i {
-            padding-right: 15px;
-          }
+          border-bottom:0px;
         }
       }
 
       div.contactForms {
-        width: 50%;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0px;
+        align-items: center;
+        justify-content: center;
 
         form {
           width: 100%;
 
           div.inputTitles {
             h3 {
-              font-size: 4rem;
+              font-size: 2.2rem;
               font-weight: 400;
             }
           }
 
           div.emailInput {
-            width: 50vh;
+            width: 100%;
           }
 
           div.messageInput {
-            width: 50vh;
+            width: 100%;
           }
 
           div.nameInput {
-            width: 50vh;
+            width: 100%;
           }
 
           input {
@@ -735,7 +734,7 @@ div.main {
             background-color: black;
             color: white;
             font-weight: medium;
-            font-size: 2rem;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: ease-in-out 0.2s;
 
@@ -746,23 +745,24 @@ div.main {
           }
 
           div.messageInput {
-            // width: 100vh;
+            width: 100%;
 
             textarea {
-              // width: 100vh;
               height: 300px;
-              width: 110%;
-              font-size: 2rem;
+              width: 100%;
+              font-size: 1.2rem;
             }
           }
 
           div.submitButton {
-            width: 60vh;
-            margin-bottom: 200px;
-            margin-top: 100px;
+            width: 100%;
+            margin-bottom: 100px;
+            margin-top: 50px;
+            margin-left: 0;
 
             button {
-              font-size: 3rem;
+              font-size: 1.5rem;
+              width: 100%;
             }
           }
         }
