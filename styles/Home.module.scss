@@ -1,6 +1,7 @@
 div.main {
   padding: 60px;
   width: 100%;
+  overflow: hidden;
 
   div.navBar {
     display: flex;
@@ -92,7 +93,6 @@ div.main {
     div.skills {
       padding-right: 30px;
       margin-top: 150px;
-
     }
 
     div.leftContainer {
@@ -122,7 +122,6 @@ div.main {
           color: rgba(0, 0, 0, 0.507);
         }
       }
-
 
       h4 {
         font-weight: 400;
@@ -175,7 +174,6 @@ div.main {
             image-rendering: pixelated;
             object-fit: cover;
           }
-
         }
       }
     }
@@ -383,14 +381,27 @@ div.main {
       div.main {
         font-size: 2rem;
       }
-    }
+      div.contact {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        height: auto;
+        margin-left: 20%;
+        margin-top: 70px;
 
-    div.contact {
-      display: grid;
-      position: relative;
+        div.contactText {
+          width: 100%;
+          text-align: center;
+        }
 
-      div.contactForms {
-        margin-left: 25%;
+        div.contactForms {
+          margin-top: 70px;
+          margin-right: 40%;
+        }
       }
     }
   }
@@ -603,6 +614,7 @@ div.main {
     div.contact {
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       width: 100%;
 
       div.contactText {
@@ -629,10 +641,10 @@ div.main {
         div.social {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          width: 100%;
 
           div.twitter {
-            margin: 70px 30px 0 0;
+            margin: 70px 0px 0 0;
 
             a {
               display: flex;
@@ -652,7 +664,7 @@ div.main {
         }
 
         div.github {
-          margin: 70px 30px 0 0;
+          margin: 70px 0px 0 0;
 
           a {
             display: flex;
@@ -671,7 +683,7 @@ div.main {
         }
 
         div.linkedn {
-          margin: 70px 30px 0 0;
+          margin: 0px 0px 0 0;
 
           a {
             justify-content: center;
@@ -690,13 +702,7 @@ div.main {
         }
       }
 
-
       div.contactForms {
-        // width: 100%;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
         width: 50%;
 
         form {
@@ -749,8 +755,6 @@ div.main {
               font-size: 2rem;
             }
           }
-
-
 
           div.submitButton {
             width: 60vh;

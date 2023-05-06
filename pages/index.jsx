@@ -2,14 +2,14 @@ import styles from "../styles/Home.module.scss";
 import emailjs from "@emailjs/browser";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import AOS from 'aos';
+import AOS from "aos";
 
 export default function Home() {
   const [toggle, setToggle] = useState(true);
 
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
   const [setLoading, Loading] = useState(false);
   function sendEmail(e) {
     setLoading == false;
@@ -55,7 +55,9 @@ export default function Home() {
           </h3>
           <h3>CONTACT</h3>
         </div>
-        <div className={styles.logo} data-aos="fade-up">Alex Karidas</div>
+        <div className={styles.logo} data-aos="fade-up">
+          Alex Karidas
+        </div>
         <div className={styles.rightNav} data-aos="fade-up">
           <ul>
             <li id={"moon"}>
@@ -96,11 +98,20 @@ export default function Home() {
           <h4 id={styles.biographyText} data-aos="fade-up">
             I am a web developer based in Greece with a passion for programming
             and learning. I am currently working at{" "}
-            <a href="https://www.metabloq.io/" id={styles.metabloq} target="_blank" rel="noreferrer">Metabloq.io</a>
+            <a
+              href="https://www.metabloq.io/"
+              id={styles.metabloq}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Metabloq.io
+            </a>
           </h4>
 
           <div className={styles.skills} data-aos="fade-up">
-            <h3 id={styles.skills} data-aos="fade-up">Skills</h3>
+            <h3 id={styles.skills} data-aos="fade-up">
+              Skills
+            </h3>
             <h4>HTML5</h4>
             <h4>CSS</h4>
             <h4>JAVASCRIPT</h4>
@@ -113,7 +124,11 @@ export default function Home() {
         <div className={styles.frameOfMainPicture} data-aos="fade-up">
           <div className={styles.secondFrame} data-aos="fade-up">
             <div className={styles.mainPicture} data-aos="fade-up">
-              <img src="/profile.jpg" className={styles.profile} alt="Profile photo"></img>
+              <img
+                src="/profile.jpg"
+                className={styles.profile}
+                alt="Profile photo"
+              ></img>
               <img src="/profile.jpg" className={styles.overlay}></img>
             </div>
           </div>
@@ -192,7 +207,13 @@ export default function Home() {
               <h3>Message</h3>
             </div>
             <div className={styles.messageInput}>
-              <textarea placeholder="Insert message to be sent..." id={styles.message} name="Message" required data-aos="fade-up" />
+              <textarea
+                placeholder="Insert message to be sent..."
+                id={styles.message}
+                name="Message"
+                required
+                data-aos="fade-up"
+              />
             </div>
             <div className={styles.submitButton} data-aos="fade-up">
               <button id={styles.send} type="submit" value="Send Message">
