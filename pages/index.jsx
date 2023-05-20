@@ -118,6 +118,7 @@ export default function Home() {
             <h4>REACT JS</h4>
             <h4>NEXT JS</h4>
             <h4>SASS</h4>
+            <h4>TAILWIND</h4>
           </div>
         </div>
 
