@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import Image from "next/image";
 
 export default function Home() {
   const [toggle, setToggle] = useState(true);
@@ -61,12 +62,20 @@ export default function Home() {
         <div className={styles.rightNav} data-aos="fade-up">
           <ul>
             <li id={"moon"}>
-              <button onClick={() => setTheme("dark") && setMounted(true)}>
+              <button
+                aria-label="dark mode button"
+                role="presentation"
+                onClick={() => setTheme("dark") && setMounted(true)}
+              >
                 <i className={"fas fa-moon"} />
               </button>
             </li>
             <li id={"sun"}>
-              <button onClick={() => setTheme("light") && setMounted(false)}>
+              <button
+                aria-label="light mode button"
+                role="presentation"
+                onClick={() => setTheme("light") && setMounted(false)}
+              >
                 <i className={"fas fa-sun"} />
               </button>
             </li>
@@ -119,12 +128,12 @@ export default function Home() {
         <div className={styles.frameOfMainPicture} data-aos="fade-up">
           <div className={styles.secondFrame} data-aos="fade-up">
             <div className={styles.mainPicture} data-aos="fade-up">
-              <img
-                src="/profile.jpg"
-                className={styles.profile}
-                alt="Profile photo"
-              ></img>
-              <img src="/profile.jpg" className={styles.overlay}></img>
+              <div className={styles.profile}>
+                <Image fill={true} src="/profile.jpg" alt="Profile Photo" />
+              </div>
+              <div className={styles.overlay}>
+                <Image fill={true} src="/profile.jpg" alt="Overlay Image" />
+              </div>
             </div>
           </div>
         </div>
