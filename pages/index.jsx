@@ -97,15 +97,7 @@ export default function Home() {
           <h3 data-aos="fade-up">Biography</h3>
           <h4 id={styles.biographyText} data-aos="fade-up">
             I am a web developer based in Greece with a passion for programming
-            and learning. I am currently working at{" "}
-            <a
-              href="https://www.metabloq.io/"
-              id={styles.metabloq}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Metabloq.io
-            </a>
+            and learning.
           </h4>
 
           <div className={styles.skills} data-aos="fade-up">
@@ -119,6 +111,8 @@ export default function Home() {
             <h4>NEXT JS</h4>
             <h4>SASS</h4>
             <h4>TAILWIND</h4>
+            <h4>FIGMA</h4>
+            <h4>GIT</h4>
           </div>
         </div>
 
