@@ -12,7 +12,8 @@ export default function Home() {
     AOS.init();
   }, []);
   const [setLoading, Loading] = useState(false);
-  function sendEmail(e) {
+
+  function emailSend(e) {
     setLoading == false;
     e.preventDefault();
 
@@ -48,7 +49,7 @@ export default function Home() {
   if (!mounted) return null;
 
   return (
-    <div className={styles.main}>
+    <main className={styles.main}>
       <div className={styles.navBar}>
         <div className={styles.leftNav} data-aos="fade-up">
           <h3>
@@ -179,7 +180,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.contactForms} data-aos="fade-up">
-          <form onSubmit={sendEmail}>
+          <form onSubmit={emailSend}>
             <div className={styles.inputTitles} data-aos="fade-up">
               <h3>Email</h3>
             </div>
@@ -227,6 +228,6 @@ export default function Home() {
           </form>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

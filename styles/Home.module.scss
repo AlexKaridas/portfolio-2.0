@@ -1,4 +1,4 @@
-div.main {
+main.main {
   padding: 60px;
   width: 100%;
   overflow: hidden;
@@ -351,7 +351,7 @@ div.main {
 }
 
 @media only screen and (max-width: 1208px) {
-  div.main {
+  main.main {
     div.contact {
       div.contactForms {
         // margin-right: 200px;
@@ -362,7 +362,7 @@ div.main {
 }
 
 @media only screen and (max-width: 1128px) {
-  div.main {
+  main.main {
     width: 100vh;
 
     div.navBar {
@@ -377,7 +377,7 @@ div.main {
     }
 
     @media only screen and (max-width: 800px) {
-      div.main {
+      main.main {
         font-size: 2rem;
       }
 
@@ -408,7 +408,7 @@ div.main {
 }
 
 @media only screen and (max-width: 600px) {
-  div.main {
+  main.main {
     width: 100%;
     height: auto;
     display: flex;
@@ -689,10 +689,9 @@ div.main {
               width: 150px;
               font-size: 1.3rem;
             }
-
           }
 
-          border-bottom:0px;
+          border-bottom: 0px;
         }
       }
 
