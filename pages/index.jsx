@@ -2,12 +2,11 @@ import styles from "../styles/Home.module.scss";
 import emailjs from "@emailjs/browser";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import AOS from "aos";
 import Image from "next/image";
 
 export default function Home() {
-  const [toggle, setToggle] = useState(true);
-
   useEffect(() => {
     AOS.init();
   }, []);
@@ -53,7 +52,9 @@ export default function Home() {
       <div className={styles.navBar}>
         <div className={styles.leftNav} data-aos="fade-up">
           <h3>
-            <a href="https://github.com/AlexKaridas?tab=repositories">WORKS</a>
+            <Link href="https://github.com/AlexKaridas?tab=repositories">
+              WORKS
+            </Link>
           </h3>
           <h3>CONTACT</h3>
         </div>
@@ -81,19 +82,19 @@ export default function Home() {
               </button>
             </li>
             <li>
-              <a href="https://github.com/AlexKaridas">
+              <Link href="https://github.com/AlexKaridas">
                 <i className={"fab fa-github"}></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/alex-karidas-1a6b4021a/">
+              <Link href="https://www.linkedin.com/in/alex-karidas-1a6b4021a/">
                 <i className={"fab fa-linkedin"}></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://twitter.com/AlexKaridas">
+              <Link href="https://twitter.com/AlexKaridas">
                 <i className={"fab fa-twitter"}></i>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -127,16 +128,15 @@ export default function Home() {
         </div>
 
         <div className={styles.frameOfMainPicture} data-aos="fade-up">
-          <div className={styles.secondFrame} data-aos="fade-up">
-            <div className={styles.mainPicture} data-aos="fade-up">
-              <div className={styles.profile}>
-                <Image fill={true} src="/profile.jpg" alt="Profile Photo" />
-              </div>
-              <div className={styles.overlay}>
-                <Image fill={true} src="/profile.jpg" alt="Overlay Image" />
-              </div>
-            </div>
-          </div>
+          <Image
+            fill={true}
+            placeholder="empty"
+            src="/profile.jpg"
+            alt="Profile Photo"
+            priority={true}
+            data-aos="fade-up"
+            style={{ objectFit: "cover" }}
+          />
         </div>
         <div className={styles.rightContainer} data-aos="fade-up">
           <h3>SERVICES</h3>
@@ -166,16 +166,16 @@ export default function Home() {
               </a>
             </div>
             <div className={styles.social} data-aos="fade-up">
-              <a href="https://github.com/AlexKaridas">
+              <Link href="https://github.com/AlexKaridas">
                 <i className={"fab fa-github"} />
                 <h4>Github</h4>
-              </a>
+              </Link>
             </div>
             <div className={styles.social} data-aos="fade-up">
-              <a href="https://www.linkedin.com/in/alex-karidas-1a6b4021a/">
+              <Link href="https://www.linkedin.com/in/alex-karidas-1a6b4021a/">
                 <i className={"fab fa-linkedin"} />
                 <h4>Linkedn</h4>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

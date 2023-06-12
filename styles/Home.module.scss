@@ -1,3 +1,5 @@
+$background-color: #ffffff;
+$foreground-color: #000000;
 main.main {
   padding: 60px;
   width: 100%;
@@ -33,7 +35,7 @@ main.main {
 
         a {
           text-decoration: none;
-          color: black;
+          color: $foreground-color;
         }
       }
     }
@@ -51,7 +53,7 @@ main.main {
 
           a {
             i {
-              color: black;
+              color: $foreground-color;
               font-size: 20px;
               transition: ease-in-out 0.2s;
 
@@ -97,12 +99,6 @@ main.main {
     div.leftContainer {
       width: 25%;
 
-      #metabloq {
-        &:hover {
-          color: #5389ff;
-        }
-      }
-
       h3 {
         font-weight: 500;
         font-size: 2rem;
@@ -137,44 +133,9 @@ main.main {
     }
 
     div.frameOfMainPicture {
+      position: relative;
       width: 50%;
-      border: 1px solid rgba(0, 0, 0, 0.17);
-      height: 100vh;
-      border-radius: 3rem;
-
-      &:hover {
-        border: 1px solid black;
-        transition: ease-in-out 0.3s;
-      }
-
-      div.secondFrame {
-        border: 1px solid rgba(0, 0, 0, 0.329);
-        margin: 40px;
-        height: 90%;
-        border-radius: 3rem;
-
-        div.mainPicture {
-          width: 100%;
-          height: 100%;
-          position: relative;
-
-          img.profile {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-
-          img.overlay {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            image-rendering: pixelated;
-            object-fit: cover;
-          }
-        }
-      }
+      height: 1000px;
     }
 
     div.rightContainer {
@@ -316,12 +277,16 @@ main.main {
   }
 }
 
-[data-theme="dark"] div.main {
+[data-theme="dark"],
+[data-theme="dark"] body {
+  $background-color: #ffffff;
+  $foreground-color: #000000;
   div.navBar {
     div.leftNav {
       h3 {
         a {
-          color: white;
+          text-decoration: none;
+          color: $background-color;
         }
       }
     }
@@ -354,7 +319,6 @@ main.main {
   main.main {
     div.contact {
       div.contactForms {
-        // margin-right: 200px;
         width: 50%;
       }
     }
@@ -415,8 +379,6 @@ main.main {
     flex-direction: column;
 
     div.navBar {
-      // display: none;
-
       div.logo {
         display: none;
       }
@@ -542,36 +504,11 @@ main.main {
       }
 
       div.frameOfMainPicture {
+        position: relative;
         width: 100%;
         margin: 0;
         padding: 0;
-        height: auto;
-
-        div.secondFrame {
-          width: 100%;
-          margin: 0;
-          padding: 0;
-
-          div.mainPicture {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            height: 500px;
-
-            img.profile {
-              width: 100%;
-              margin: 0;
-              padding: 0;
-            }
-
-            img.overlay {
-              width: 100%;
-              margin: 0;
-              padding: 0;
-              display: none;
-            }
-          }
-        }
+        height: 500px;
       }
 
       div.rightContainer {
@@ -750,6 +687,8 @@ main.main {
               height: 300px;
               width: 100%;
               font-size: 1.2rem;
+              background-color: black;
+              color: white;
             }
           }
 

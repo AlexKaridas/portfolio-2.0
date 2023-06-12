@@ -24,14 +24,6 @@ function MyApp({ Component, pageProps }) {
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <meta name="theme-color" content="#000000" />
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/aos@next/dist/aos.css"
-          />
-          <link
-            href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css"
-            rel="stylesheet"
-          />
         </Head>
         <Component {...pageProps} />
       </Layout>

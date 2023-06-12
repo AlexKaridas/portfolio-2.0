@@ -1,7 +1,14 @@
+:root {
+  --background: white;
+  --foreground: black;
+}
+[data-theme='dark'] {
+  --background: black;
+  --foreground: white;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* font-family: "Raleway", sans-serif; */
   font-family: 'Noto Sans JP', "Raleway", sans-serif;
 }
